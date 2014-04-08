@@ -1,17 +1,18 @@
 ## a pair of functions that cache the inverse of a matrix.
+## a example of how to use this pair of functions can be seen at:
+## 
+
 
 ## This function creates a special "matrix" object that can cache its inverse.
 
 makeCacheMatrix <- function(x = matrix()) {
-  ix <- NULL
-  set <- function(x){
-    x <<- y
-    ix <<- NULL
+  if (is.matrix(x) != T){
+    message("invalid input")
   }
-  get <- function() x
-  setinverse <- function(solve) ix <<- solve
-  getinverse <- function() ix
-  list( set = set, get = get, setinverse = setinverse, getinverse = getinverse)
+  else{
+    cx <<- x
+    cinvx <<- solve(x)
+  }
 }
 
 
@@ -20,15 +21,16 @@ makeCacheMatrix <- function(x = matrix()) {
 ## then the cachesolve should retrieve the inverse from the cache.
 
 cacheSolve <- function(x, ...) {
-  ## Return a matrix that is the inverse of 'x'
-  ix <- x$getinverse()
-  if(!is.null(ix)){
-    message("getting cached inverse matrix")
-    return(ix)    
+  if (is.matrix(x) != T){
+    print("invalid input")
   }
-  data <- x$get()
-  ix <- solve(x,...)
-  x$setinverse(ix)
-  ix
-    
+  else if (identical(x,cx) & class(cinvx)== "matrix"){
+    message("cache exists")
+    return(cinvx)
+  }
+  else{
+    message("cache does not exists")
+    return(solve(x))
+  }
 }
+

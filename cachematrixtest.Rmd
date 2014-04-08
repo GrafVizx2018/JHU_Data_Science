@@ -1,0 +1,26 @@
+cachematrix example
+========================================================
+
+generating three $3 \times 3$ matrices, $X1,X2$ and $X3$ with $X1 = X2 != X3$
+
+```{r}
+X1 <- matrix(1:4,2,2)
+X2 <- matrix(1:4,2,2)
+X3 <- matrix(2:5,2,2)
+```
+
+create a cache for inverse of matrix X1
+
+```{r}
+source("cachematrix.R")
+makeCacheMatrix(X1)
+```
+
+test cases
+```{r}
+cacheSolve(X1)
+cacheSolve(X2)
+cacheSolve(matrix(1:4,2,2))
+cacheSolve(X3)
+cacheSolve(c(1,2,3,4))
+```
