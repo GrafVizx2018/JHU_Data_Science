@@ -1,6 +1,6 @@
 ## a pair of functions that cache the inverse of a matrix.
 ## a example of how to use this pair of functions can be seen at:
-## 
+## https://raw.githubusercontent.com/ryancheunggit/datasciencecoursera/master/cachematrixtest.html
 
 
 ## This function creates a special "matrix" object that can cache its inverse.
