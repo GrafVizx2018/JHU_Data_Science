@@ -17,5 +17,5 @@ List of files and information
 
 ##3 Getting and Cleaning Data
 ###for peer assessment assignment:
-+ run_analysis.R // code
++ run_analysis.R // code for assignment, download and unzip the data zip file, set the working directory of R to the directory that contains the unziped files, run the code to get tidy dataset 
 
