@@ -1,6 +1,8 @@
 ## a pair of functions that cache the inverse of a matrix.
+
+
 ## a example of how to use this pair of functions can be seen at:
-## https://raw.githubusercontent.com/ryancheunggit/datasciencecoursera/master/cachematrixtest.html
+## https://github.com/ryancheunggit/ProgrammingAssignment2/blob/master/cachematrixtest.md
 
 
 ## This function creates a special "matrix" object that can cache its inverse.
@@ -33,4 +35,3 @@ cacheSolve <- function(x, ...) {
     return(solve(x))
   }
 }
-
