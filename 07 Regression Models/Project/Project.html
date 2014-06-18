@@ -231,7 +231,7 @@ Selected.model &lt;- step(model, direction = &quot;backward&quot;, k = 2)
 <p>Table 1(see appendix) is the summary table of the selected model. According to it, the adjusted r-squared is 0.8659, suggest that 86% of the variation in mpg is explained by the selected model.<br/>
 The coefficient of &ldquo;am&rdquo; in the selected model 1.80921 interpreted as: holding &ldquo;wt&rdquo;, &ldquo;cyl&rdquo; and &ldquo;hp&rdquo; constant, manual transmitted cars&#39; mpg is 1.80921 more than automatic transmitted cars.</p>
 
-<h3>5 Model Comparision</h3>
+<h3>6 Model Comparision</h3>
 
 <p>Comparing the selected model with models contain only a subset of variables of it using Analysis of Variance(ANOVA).</p>
 
@@ -246,11 +246,11 @@ anova(Null.model, model1, model2, Selected.model)[2:4, 6]
 
 <p>The analysis suggests that selected model is statistical significantly different from all the other models and variables &ldquo;cyl&rdquo;,&ldquo;hp&rdquo; and &ldquo;wt&rdquo; do contribute to the variation of mpg in the dataset.   </p>
 
-<h3>6 Residual Analysis</h3>
+<h3>7 Residual Analysis</h3>
 
 <p>Figure 3(see appendix), a plot of fitted values of the selected model vs the residuals, suggests that the residuals are independently distributed.Figure 4(see appendix), a residual QQ plots, suggests that the residuals are normally distributed.</p>
 
-<h3>7 Diagnositics</h3>
+<h3>8 Diagnositics</h3>
 
 <p>The leverages for the dataset is calculated and based on a criteria 0.5 there are no outlier.</p>
 
